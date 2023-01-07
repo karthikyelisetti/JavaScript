@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+      <script>
+        var str2='hello everyone hello IS the most common greeting'
+        var i=str2.indexOf("hello",10)
+        var i2= str2.lastIndexOf("helloooooo")
+        // console.log(str2.length)
+        // console.log(i2);
+        // console.log(i);
+        var i3= str2.search("is")
+        // console.log(i3)
+
+        console.log(str2.slice(0,4));
+        console.log(str2.slice(10,0));
+        console.log(str2.slice(-11,-8));
+        console.log(str2.slice(str2.length))
+        console.log(str2.slice(15));
+        console.log(str2.substr(10,0));
+        console.log(str2.substr(-1,-8));
+        console.log(str2.substr(15));
+        str2 = str2.replaceAll('hello','Hi');
+        console.log(str2);
+      </script>
+    </body>
+</html>

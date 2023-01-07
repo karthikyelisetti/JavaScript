@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    //reversing a number
+    function reverse(num){
+        Output = 0 ;
+        Reverse = 0;
+        while(num){      
+        Reverse = num % 10;  
+        Output = Output * 10 + Reverse;  
+        num = Math.floor(num/10); 
+    }
+    console.log(Output);
+    }
+
+    //pyramid 
+    function pyramid(a) {
+        var str = "* ";
+        var space = " ";
+        for (var i = 1; i <= a; i++) {
+            console.log(space.repeat(a - i), str.repeat(i));
+        }
+    }
+
+    //factorial
+    function factfor(a) {
+        var fact = 1;
+        for (i = a; i > 0; i--) {
+            fact = fact * i;
+        }
+        console.log(fact);
+    }
+
+    //fibanocci
+    function fibb(num) { 
+        var num1 = 0;
+        var num2 = 1
+        var a, i; 
+        for ( i = 1; i <= num; i++) {
+            a = num1 + num2;                    
+            num1 = num2;  
+            num2 = a;
+            console.log(a);
+        }   
+    }
+
+    //Multiplication table
+    function multiplication(num){
+        out=0
+        for(i=1;i<=10;i++){
+            out=i*num
+            console.log(num + " X " + i + " = " + out)
+
+        }
+    }
+
+    Ip=parseInt(prompt("enter number for function: "))
+
+    if(Ip===1){
+        number=parseInt(prompt("enter number for reversing:"))
+        op=reverse(number)
+    }
+    else if(Ip===2){
+        fib=parseInt(prompt("enter number for fibbonaci:"))
+        op=fibb(fib)
+    }
+    else if(Ip===3){
+        mul=parseInt(prompt("enter number for mutilplication:"))
+        op=multiplication(mul)
+    }
+    else if(Ip===4){
+        factint=parseInt(prompt("enter number for factorial:"))
+        op=factfor(factint)
+    }
+    else if(Ip===5){
+        pyint=parseInt(prompt("enter number for pyramid:"))
+        op=pyramid(pyint)
+    }
+    else{
+        document.write("out of stock")
+    }
+  </script>
+</body>
+</html>
