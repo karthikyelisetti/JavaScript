@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="main-div">
+          <p id="para">This is a para</p>
+        </div>
+        <script>
+            let el=document.createElement("p");
+            let content = document.createTextNode("This is a new para from DOM");
+            el.appendChild(content);
+
+            let loc = document.getElementById("para");
+            document.body.firstElementChild.appendChild(el);
+            let loc1 = document.getElementById("main-div");
+            loc1.style.background = "yellow";
+
+            // Removing existing element
+            // let parent = document.getElementById("main-div");
+            // let child = document.getElementById("para");
+            // parent.removeChild(child);
+
+            let child = document.getElementById("para");
+            // child.parentNode.removeChild(child);
+            
+            let parent = document.getElementById("main-div");
+            
+            let el1 = document.createElement("p");
+            let con = document.createTextNode("We are appending a new paragraph");
+            el1.appendChild(con);
+
+            parent.replaceChild(el1, child);
+
+        </script>
+    </body>
+</html>
