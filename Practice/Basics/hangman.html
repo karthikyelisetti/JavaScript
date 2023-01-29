@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-      <script>
-        var chances = 0;
-        if (chances == 0) {
-            var dash = "_ _ _ _ _ _";
-            alert("Guess the word challenge!!! ( _ _ _ _ _ _ _ )");
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <script>
+      var chances = 0;
+      if (chances == 0) {
+        var dash = "_ _ _ _ _ _";
+        alert("Guess the word challenge!!! ( _ _ _ _ _ _ _ )");
+      }
+      var dashArr = [];
+      var temp = 0;
+
+      while (chances <= 10) {
+        var boolean = false;
+        if (dash.split(" ").indexOf("_") == -1) {
+          alert("Congratulation! you won the chllenge :-) ");
+          break;
         }
-        var dashArr = [];
-        var temp = 0;        
+        var str = "batch8";
+        var strArr = str.split("");
+        var val = prompt(
+          "Guess the characters in the word!... ( " + dash + " )"
+        );
+        var puzzleArr = [];
+        chances += 1;
 
-        while (chances <= 10) {
-            var boolean = false;
-            if (dash.split(" ").indexOf("_") == -1) {
-                alert("Congratulation! you won the chllenge :-) ");
-                break;
+        for (i = 0; i < strArr.length; i++) {
+          if (strArr[i] == val) {
+            temp = strArr.indexOf(strArr[i]);
+            dashArr = dash.split(" ");
+            for (j in dashArr) {
+              if (j == temp) {
+                puzzleArr.push(val);
+              } else {
+                puzzleArr.push(dashArr[j]);
+              }
             }
-            var str = "batch8";
-            var strArr = str.split("");
-            var val = prompt("Guess the characters in the word!... ( "+dash+" )");
-            var puzzleArr = [];
-            chances += 1;
-                        
-            for (i=0;i<strArr.length;i++) {
-                if (strArr[i] == val) {
-                    temp = strArr.indexOf(strArr[i]);
-                    dashArr = dash.split(" ");
-                    for (j in dashArr) {
-                        if (j == temp) {
-                            puzzleArr.push(val);
-                        }else {
-                            puzzleArr.push(dashArr[j]);
-                        }
-                    }
-                    dash = puzzleArr.join().replaceAll(","," ");
-                    break; 
-                }  
-            }
-            if (dash.split(" ").indexOf("_") > -1 && chances == 10) {
-                alert("You have exceeded the maximum number(10) of possibilities, Try again!!!");
-                break;
-            }          
-        }       
-
-      </script>
-    </body>
+            dash = puzzleArr.join().replaceAll(",", " ");
+            break;
+          }
+        }
+        if (dash.split(" ").indexOf("_") > -1 && chances == 10) {
+          alert(
+            "You have exceeded the maximum number(10) of possibilities, Try again!!!"
+          );
+          break;
+        }
+      }
+    </script>
+  </body>
 </html>
