@@ -36,4 +36,26 @@ const obj = {
 }
   
 let result =obj.namesetter('testName');
-console.log(result)
+console.log(result);
+
+// Preventing right click
+document.addEventListener ("contextmenu", (event) => {
+    event.preventDefault();
+    alert("Right click is disabled here");
+})
+
+// Random jokes
+function randomJokes() {
+    var arr = ["Joke is a joke", "HTML likes CSS", "script a story using javascript"];
+    var randomJoke = arr[Math.floor(Math.random()*arr.length)];
+    document.write(randomJoke);
+}
+
+// Date format
+function generateDate() {
+    var dd = new Date().getDate();
+    var mm = new Date().getMonth()+1;
+    var yyyy = new Date().getFullYear();
+    document.write(dd +"-"+ mm +"-"+yyyy )
+}
+generateDate();
