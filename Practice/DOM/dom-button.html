@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding:15px;
+            font-size: 15px;
+        }
+        #team1{
+          background-color: green;
+        }
+        #team2{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="Team_result"></div>
+        
+        
+        <button id="team1" onclick="teamAcount()">Team-A</button>
+        <button id="team2" onclick="teamBcount()">Team-B</button>
+    </div><br>
+    <div id="result">
+        <button id="total" onclick="total()">All Total</button>
+    </div>
+    <script>
+        let teamA = document.getElementById("team1")
+        let teamB = document.getElementById("team2")
+        let count = 0
+        let count1 = 0
+
+        let tr = document.getElementById("Team_result")
+        let tA = document.createElement('p')
+
+        function teamAcount(){
+            count++
+            tA.innerHTML = "Team A: " + count
+            tr.appendChild(tA)
+            tA.style.background = "green"
+        }
+        function teamBcount(){
+            count1++
+            tA.innerHTML = "Team B: " + count1
+            tr.appendChild(tA)
+            tA.style.background = "yellow"
+        }
+
+        let parent = document.getElementById("result")
+        let all = document.createElement("p")
+        let temp = document.createElement('div')
+
+        
+        temp.style.display = "none"
+ 
+        function total(){
+        temp.style.display = "block"
+        temp.innerHTML = "Team A: " + parseInt(count) + "<br>" + "Team B: " + parseInt(count1)
+        parent.appendChild(temp)
+        
+        all.innerHTML = "SUM: " + parseInt(count + count1)
+        parent.appendChild(all)
+        }
+
+
+        
+
+        
+    </script>
+    
+</body>
+</html>

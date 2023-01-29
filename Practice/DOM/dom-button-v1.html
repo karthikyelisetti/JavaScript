@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button task</title>
+    <style>
+        body{
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .s1{
+            display: none;
+        }
+        .active{
+            display: block;
+            background-color: blueviolet;
+        }
+        button{
+            width: 5rem;
+            height: 2rem;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <p class="s1" id="team1"></p>
+        <p class="s1" id="team2"></p>
+        <button  id="bt1" onclick="Team1()">Team1</button>
+        <button id="bt2" onclick="Team2()">Team2</button>
+        <p class="s1" id="tt"></p>
+        <p class="s1" id="tt1"></p>
+        <p class="s1" id="tt2"></p>
+        <br>
+        <br>
+        <button id="total" onclick="total()">Total all</button>
+
+    </div>
+    <script>
+        t1count=0
+        function Team1(){
+            var temp2=document.getElementById("team2")
+            temp2.classList.remove("active")
+            t1count++
+            var temp1=document.getElementById("team1")
+            temp1.classList.add("active")
+            temp1.innerText=`Count of Team1: ${t1count}`
+            // return t1count
+           
+        }
+
+        t2count=0
+       function Team2(){
+            var temp1=document.getElementById("team1")
+            temp1.classList.remove("active")
+            t2count++
+            var temp2=document.getElementById("team2")
+            temp2.classList.add("active")
+            temp2.style.backgroundColor="#f3558e"
+            temp2.innerText=`Count of Team2: ${t2count}`
+            // return t2count
+            
+        }
+        function total(){
+            var sum=t1count+t2count
+            // alert(sum)
+            var ttt=document.getElementById("tt")
+            var ttt1=document.getElementById("tt1")
+            var ttt2=document.getElementById("tt2")
+            ttt.classList.add("active")
+            ttt1.classList.add("active")
+            ttt.innerText=`Count of team1: ${t1count}`
+            ttt1.innerText=`Count of team2: ${t2count}`
+            ttt2.classList.add("active")
+            ttt2.innerText=`Count of two teams: ${sum}`
+
+        }
+
+        
+
+    </script>
+</body>
+</html>
