@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <script>
+      let num = prompt("Enter a number: ");
+      y = 0;
+      sum = 0;
+      while (num) {
+        val = num % 10;
+        y = y + val;
+        num = Math.floor(num % 10);
+        sum = val + y + num;
+      }
+      console.log(sum);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <script>
+      var arr5 = [2, 3, 4, 5, 6, 7];
+      var arr6 = [10, 20, 30, 40, 50];
+      var arr7 = arr5.concat(arr6);
+      console.log(arr7);
+      console.log(arr5);
+
+      console.log(arr6.indexOf(20));
+      console.log(arr6.lastIndexOf(20));
+      console.log(arr6.indexOf(201));
+
+      //Includes
+      console.log(arr6.includes(20));
+      console.log(arr6.includes(20, 1)); // will search for 20 from index-1
+      console.log(arr6.includes(20, 30)); // will search for 20 from index-30
+
+      for (i in arr6) {
+        if (arr6[i] > 20) {
+          console.log(arr6[i]);
+        }
+      }
+
+      //find - This will return the first element greater than 20
+      var val = arr6.find(function (e1) {
+        return e1 > 20;
+      });
+      console.log(val);
+
+      //filter - will print all the elements greater than 20 in array
+      var val1 = arr6.filter(function (e1) {
+        return e1 > 20;
+      });
+      console.log(val1);
+
+      //Sorting
+      arr8 = [40, 20, 10, 30, 5];
+      console.log(
+        arr8.sort(function (a, b) {
+          return a - b;
+        })
+      );
+
+      //reverse
+      var str1 = "shakul";
+      var arr1 = str1.split("");
+      arr1 = arr1.reverse();
+      console.log(arr1.join().replaceAll(",", ""));
+
+      //Min - Max
+      console.log(Math.max.apply(null, arr8));
+      console.log(Math.min.apply(null, arr8));
+
+      //Map
+      var square = [1, 2, 4, 6, 8];
+      var result = square.map(function (value) {
+        return value * value;
+      });
+      console.log(result);
+
+      //Function based Map
+      var f1 = function (value) {
+        return value * value;
+      };
+      result = square.map(f1);
+      console.log(result);
+
+      //Reduce
+      var f2 = function (a, b) {
+        return a + b;
+      };
+      var output = square.reduce(f2);
+      console.log(output);
+
+      var str2 = ["H", "e", "r", "o", "v", "i", "r", "e", "d"];
+      var f3 = function (a, b) {
+        return a + b;
+      };
+      var output1 = str2.reduce(f3);
+      console.log(output1);
+
+      var kilometers = [20, 30, 40, 50, 60];
+      var miles = [];
+      for (m in kilometers) {
+        var mile = kilometers[m] / 1.6;
+        miles.push(mile);
+      }
+      console.log(miles);
+
+      //create an array where all these elements are stored in uppercase
+      let strings = ["avengers", "captain america", "ironman", "black panther"];
+      var string = [];
+      for (s in strings) {
+        var str = strings[s].toUpperCase();
+        string.push(str);
+      }
+      console.log(string);
+
+      //create an array from an a given array which contain only the even numbers
+      //using map,filter and reduce function
+
+      var array = [1, 2, 3, 4, 5, 6, 7, 8];
+      var array1 = array.filter(function (a) {
+        return a % 2 == 0;
+      });
+      console.log(array1);
+
+      array.forEach(function (ele) {
+        if (ele % 2 == 0) {
+          array.push(ele);
+        }
+      });
+      console.log(array);
+    </script>
+  </body>
+</html>
