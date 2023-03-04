@@ -87,7 +87,7 @@ let pSubstraction = (arr) => {
 // .catch(error => console.log(error))
 
 const newPromise1 = new Promise((resolve, reject) => {
-  reject("Rejected");
+  
   setTimeout(()=>{
       resolve("resolved")
   },2000)
@@ -99,7 +99,6 @@ Promise.any([newPromise2, newPromise1]).then((result) => {
 });
 
 const newPromise3 = new Promise((resolve, reject) => {
-  reject("Rejected");
   setTimeout(()=>{
       resolve("resolved")
   },2000)
