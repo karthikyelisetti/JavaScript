@@ -87,6 +87,7 @@ let pSubstraction = (arr) => {
 // .catch(error => console.log(error))
 
 const newPromise1 = new Promise((resolve, reject) => {
+  reject("Rejected");
   setTimeout(()=>{
       resolve("resolved")
   },2000)
@@ -98,6 +99,7 @@ Promise.any([newPromise2, newPromise1]).then((result) => {
 });
 
 const newPromise3 = new Promise((resolve, reject) => {
+  reject("Rejected");
   setTimeout(()=>{
       resolve("resolved")
   },2000)
@@ -105,13 +107,13 @@ const newPromise3 = new Promise((resolve, reject) => {
 });
 const newPromise4 = Promise.resolve(100);
 const newPromise5 = Promise.reject("rejected");
-// Promise.allSettled([newPromise1, newPromise2, newPromise3])
-//   .then((result) => {
-//     console.log(result);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
+Promise.allSettled([newPromise1, newPromise2, newPromise3])
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 //Your function must always return a promise
 // If data is not a number, return a promise rejected instantly and give the data "error" (in a string)
@@ -135,6 +137,6 @@ const evenOddPromise = (a) => {
   });
 };
 
-evenOddPromise(3)
-  .then((res) => console.log(res))
-  .catch((err) => console.log(err));
+// evenOddPromise(3)
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err));
