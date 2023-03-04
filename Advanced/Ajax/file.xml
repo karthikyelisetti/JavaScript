@@ -1,0 +1,22 @@
+<LIST>
+    <BOOK>
+        <TITLE>aaa</TITLE>
+        <AUTHOR>BBBB</AUTHOR>
+        <COUNTRY>CCC</COUNTRY>
+    </BOOK>
+    <BOOK>
+        <TITLE>111</TITLE>
+        <AUTHOR>BBBB</AUTHOR>
+        <COUNTRY>CCC</COUNTRY>
+    </BOOK>
+    <BOOK>
+        <TITLE>222</TITLE>
+        <AUTHOR>BBBB</AUTHOR>
+        <COUNTRY>CCC</COUNTRY>
+    </BOOK>
+    <BOOK>
+        <TITLE>333</TITLE>
+        <AUTHOR>BBBB</AUTHOR>
+        <COUNTRY>CCC</COUNTRY>
+    </BOOK>
+</LIST>
