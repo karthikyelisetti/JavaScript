@@ -9,7 +9,7 @@ async function anyFunction() {
   const anyVar = await p;
   console.log(anyVar);
 }
-anyFunction();
+// anyFunction();
 
 
 // anyFunction()
