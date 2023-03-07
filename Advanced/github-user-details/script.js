@@ -14,10 +14,8 @@ function getUserRepos(username) {
           y += `<a class="btn btn-primary" href="${data[i].html_url}" target="_blank" role="button">${data[i].name}</a>`;
         }else {
           break;
-        }
-          
+        }          
       }
-
       userRepo.innerHTML = y;
     });
 }
