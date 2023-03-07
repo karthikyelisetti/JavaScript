@@ -11,7 +11,7 @@ function getUserRepos(username) {
       for(var i=0; i < data.length; i++) {
         counter += 1;
         if(counter <= 5){
-          y += `<li><a class="btn btn-primary" href="${data[i].html_url}" target="_blank" role="button">${data[i].name}</a><li>`;
+          y += `<a class="btn btn-primary" href="${data[i].html_url}" target="_blank" role="button">${data[i].name}</a>`;
         }else {
           break;
         }
@@ -29,20 +29,25 @@ function getUserDetails() {
     .then((data) => {
       let x = "";
       var main = document.getElementById("main");
-      x += `<div class="col-md-4 justify-content-right"><img src=${data.avatar_url} id="profile-img" /></div>`;
-      x += `<div class="col-md-6">
-              <p id="user-name">${data.name}</p>
-              <div class="container text-center">
-                <div class="row" id="details">
-                  <div class="col-sm">${data.followers} Followers</div>
-                  <div class="col-sm">${data.following} Following</div>
-                  <div class="col-sm">${data.public_repos} Repos</div>
+      x += `<div class="card text-bg-dark mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="${data.avatar_url}" class="img-fluid rounded-start" id="profile-img" alt="${data.name}">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">${data.name}</h5>
+                    <p class="card-text">
+                      <div class="row" id="details">
+                        <div class="col-sm">${data.followers} Followers</div>
+                        <div class="col-sm">${data.following} Following</div>
+                        <div class="col-sm">${data.public_repos} Repos</div>
+                      </div>
+                    </p>
+                    <p class="card-text" id="user-repo"></p>
+                  </div>
                 </div>
               </div>
-              
-              <p>
-                <ul id="user-repo"></ul>
-              </p>
             </div>`;
       main.innerHTML = x;
     });
