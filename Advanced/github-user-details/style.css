@@ -9,7 +9,7 @@
 
 #search {
   margin: 0 auto;
-  top: 100px;
+  top: 120px;
 }
 
 .card {
@@ -18,7 +18,7 @@
   margin: 60px auto;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(171, 172, 175, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  top: 100px;
+  top: 150px;
 }
 
 #profile-img {
