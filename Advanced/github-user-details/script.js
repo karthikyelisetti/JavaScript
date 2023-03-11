@@ -27,7 +27,7 @@ function getUserDetails() {
     .then((data) => {
       let x = "";
       var main = document.getElementById("main");
-      x += `<div class="card mb-3">
+      x += `<div class="card mb-3" id="card-bg">
               <div class="row g-0">
                 <div class="col-md-4">
                   <img src="${data.avatar_url}" class="img-fluid rounded-start" id="profile-img" alt="${data.name}">

@@ -15,7 +15,7 @@
 .card {
   background-color: black;
   max-width: 900px;
-  margin: 60px auto;
+  margin: 45px auto;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(171, 172, 175, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   top: 150px;
@@ -31,6 +31,9 @@
   font-size: 14px;
 }
 
+#card-bg {
+  background: rgb(197, 220, 255);
+}
 .card-title {
   margin-top: 10px;
 }
