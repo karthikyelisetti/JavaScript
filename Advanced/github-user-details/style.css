@@ -22,20 +22,27 @@
 }
 
 #profile-img {
-  width: 240px;
-  margin: 15px 15px;
+  width: 150px;
+  margin: 10px 50px;
   border-radius: 30px !important;
+}
+#bio {
+  margin-left: 50px;
+  font-size: 14px;
 }
 
 .card-title {
-  margin-top: 30px;
+  margin-top: 10px;
+}
+.card-body {
+  margin-left: -50px;
 }
 #details {
-  margin-top: 36px;
+  margin-top: 24px;
 }
 
 #user-repo {
-  margin-top: 36px;
+  margin-top: 24px;
 }
 #user-repo a {
   font-size: small;

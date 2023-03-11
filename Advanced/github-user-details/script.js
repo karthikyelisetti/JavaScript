@@ -27,14 +27,23 @@ function getUserDetails() {
     .then((data) => {
       let x = "";
       var main = document.getElementById("main");
-      x += `<div class="card text-bg-dark mb-3">
+      x += `<div class="card mb-3">
               <div class="row g-0">
                 <div class="col-md-4">
                   <img src="${data.avatar_url}" class="img-fluid rounded-start" id="profile-img" alt="${data.name}">
+                  <div id="bio">
+                    <p><img src="./images/building.svg" /> ${data.company}</p>
+                    <p><img src="./images/geo-alt.svg" /> ${data.location}</p>
+                    <p><img src="./images/link-45deg.svg" /> 
+                      <a href="${data.blog}" target="_blank">${data.blog}</a>
+                    </p>
+                    
+                  </div>
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title">${data.name}</h5>
+                    <p>${data.bio}</p>
                     <p class="card-text">
                       <div class="row" id="details">
                         <div class="col-sm">${data.followers} Followers</div>
