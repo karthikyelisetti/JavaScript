@@ -42,7 +42,7 @@ class User extends Login {
     }    
 }
 
-const p1 = new Login("Shakul", "smalik", "123456");
+var p1 = new Login("Shakul", "smalik", "123456");
 const p2 = new Login("Karthik", "karthiky", "345678");
 const adminUser = new Admin("Swathi", "1990");
 const newUser = new User("01", "Aadvika", "2017");
