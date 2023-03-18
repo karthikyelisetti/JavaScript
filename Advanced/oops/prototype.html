@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <script>
+            function learner() {
+                this.id;
+                this.name = "HeroVired";
+            }
+            var l1 = new learner();
+            learner.prototype.age = 45;
+            console.log(l1.age);
+
+            learner.prototype.id = 345;
+            const obj1 = new learner();
+            const obj2 = new learner();
+            console.log(obj1.id);
+            console.log(obj2.id);
+        </script>
+    </body>
+</html>
