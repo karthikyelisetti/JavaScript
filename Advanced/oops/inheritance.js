@@ -24,11 +24,19 @@ class Login {
 }
 
 class Admin extends Login {
-    constructor(username, password) {
+    constructor(username, password, adminId) {
         super(username, password)
+        this.adminId = adminId;
     }
     removeUser(userId) {
         console.log(`Removed ${userId}`);
+    }
+    loginSuccess(username, adminId) {
+        if (username === this.name && adminId === this.adminId) {
+            console.log("Admin login successful");
+        }else {
+            console.log("Try again");
+        }
     }
 }
 
@@ -44,10 +52,9 @@ class User extends Login {
 
 var p1 = new Login("Shakul", "smalik", "123456");
 const p2 = new Login("Karthik", "karthiky", "345678");
-const adminUser = new Admin("Swathi", "1990");
+const adminUser = new Admin("Swathi", "1990", "2345");
 const newUser = new User("01", "Aadvika", "2017");
-adminUser.loginSuccess("Aadvika", "2017");
-p1.removeUser("011");
+adminUser.loginSuccess("Swathi","2345");
 
 // p1.loginSuccess ("malik", "23456");
 // console.log(p1.password);
